@@ -1,0 +1,7 @@
+{
+  "articles": [
+    {"id": 1, "title": "Intro to JavaScript", "summary": "Learn variables and functions"},
+    {"id": 2, "title": "AJAX Basics", "summary": "How to fetch data from a server"},
+    {"id": 3, "title": "jQuery UI", "summary": "Build interactive UI elements"}
+  ]
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery UI Demo</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+</head>
+<body>
+  <h1>jQuery UI Elements</h1>
+  <div id="tabs">
+    <ul>
+      <li><a href="#tab-1">Home</a></li>
+      <li><a href="#tab-2">More</a></li>
+    </ul>
+    <div id="tab-1">
+      <p>Slider Value: <span id="sliderVal">50</span></p>
+      <div id="slider"></div>
+      <button id="openModal">Open Modal</button>
+    </div>
+    <div id="tab-2">
+      <p>Welcome to the second tab!</p>
+    </div>
+  </div>
+  <div id="dialog" title="Modal Window" style="display:none;">
+    <p>This is a modal dialog using jQuery UI.</p>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
+
