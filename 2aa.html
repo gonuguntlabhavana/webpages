@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple JavaScript Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #3366cc;
+    }
+
+    #output {
+      background-color: #ffffff; 
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Basics</h1>
+  <div id="output"></div>
+
+  <script>
+    // --- Variables ---
+    let name = "Suresh";
+    const pi = 3.14;
+    var age = 25;
+
+    // --- Functions ---
+    function greet(user) {
+      return "Hello, " + user;
+    }
+
+    function square(n) {
+      return n * n;
+    }
+
+    // --- Object ---
+    const student = {
+      id: 101,
+      name: "Sita Ram",
+      marks: {
+        math: 85,
+        science: 92
+      },
+      showInfo: function() {
+        return "ID: " + this.id + ", Name: " + this.name;
+      }
+    };
+
+    // --- Display on page ---
+    document.getElementById("output").innerHTML = `
+      <p><b>Variables:</b><br>
+         name = ${name}, age = ${age}, pi = ${pi}</p>
+      <p><b>Functions:</b><br>
+         greet(name) → ${greet(name)}<br>
+         square(5) → ${square(5)}</p>
+      <p><b>Object:</b><br>
+         student.showInfo() → ${student.showInfo()}<br>
+         Math = ${student.marks.math}, Science = ${student.marks.science}</p>
+    `;
+  </script>
+
+</body>
+</html>

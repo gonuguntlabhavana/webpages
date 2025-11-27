@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple AJAX Form</title>
+</head>
+<body>
+  <h1>Simple AJAX Form</h1>
+  
+  <form id="contactForm">
+    <label>
+      Name: <input type="text" name="name" required />
+    </label><br><br>
+    <label>
+      Email: <input type="email" name="email" required />
+    </label><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>Saved Contacts</h2>
+  <ul id="contactList"></ul>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const list = document.getElementById('contactList');
+    const contacts = []; // Store contacts locally (since no real backend)
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(form);
+      const name = formData.get('name');
+      const email = formData.get('email');
+
+      // Add new contact locally
+      contacts.push({ name, email });
+
+      // Render updated list
+      renderContacts();
+
+      // Clear form inputs
+      form.reset();
+    });
+
+    function renderContacts() {
+      list.innerHTML = contacts
+        .map(c => `<li>${c.name} — ${c.email}</li>`)
+        .join('');
+    }
+  </script>
+</body>
+</html>
